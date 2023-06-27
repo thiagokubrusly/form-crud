@@ -43,23 +43,13 @@ const isValidFields = () => {
     return document.getElementById('form').reportValidity()
 }
 
-// const isValidFields = () => {
-
-//     if(celRegex.getElementById('celular').value) {
-//         let celRegex = /^([14689][0-9]|2[12478]|3([1-5]|[7-8])|5([13-5])|7[193-7])9[0-9]{8}$/
-//         return document.getElementById('form').reportValidity()
-            
-//     } else () => {
-//         console.log('Informe um número de celular válido')
-//         }
-    
-// }
-
 // Interação com layout/usuário
-
 const clearFields = () => {
     const fields = document.querySelectorAll('.modal-field') 
     fields.forEach(field => field.value = "")
+
+    document.getElementById('nome').dataset.index = 'new'
+    document.querySelector(".modal-header>h2").textContent  = 'Novo Cliente'
 }
 
 const saveClient = () => {
@@ -159,21 +149,3 @@ document.getElementById('cancelar')
 
 document.querySelector('#tableClient>tbody')
     .addEventListener('click', editDelete)
-
-
-// VALIDAÇÃO DO CEL - REGEX
-
-let celRegex = /^([14689][0-9]|2[12478]|3([1-5]|[7-8])|5([13-5])|7[193-7])9[0-9]{8}$/
-
-
-
-
-// function verificaCelular(celular) {
-//     celular =  celular.replace('/[^0-9]/', '');
-//     return celular.match(/^([14689][0-9]|2[12478]|3([1-5]|[7-8])|5([13-5])|7[193-7])9[0-9]{8}$/);
-// }
-
-// if(!verificaCelular('(11)99999-9999'))
-// {
-//     console.log('O número informado não é um celular válido!');
-// }
