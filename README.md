@@ -21,4 +21,4 @@
 
 ## Preview
 
-![](https://github.com/thiagokubrusly/form-crud/blob/main/preview.gif?raw=true)
+![](https://github.com/thiagokubrusly/form-crud/blob/main/preview-video.gif?raw=true)
